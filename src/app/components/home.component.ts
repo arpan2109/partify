@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SupabaseService } from '../services/supabase.service';
@@ -18,7 +18,7 @@ import { Product } from '../models/product.model';
     top: 1rem;
     left: 1rem;}`
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,OnDestroy {
   products: Product[] = [];
   bestSellers: Product[] = [];
   shopGramImages = [
@@ -28,6 +28,13 @@ export class HomeComponent implements OnInit {
     'assets/laptop.png',
     'assets/gram05.png'
   ];
+ // Timer variables
+ hours: number = 24;
+ minutes: number = 5;
+ seconds: number = 11;
+
+ // Timer interval reference
+ private timerInterval: any;
 
   constructor(private supabaseService: SupabaseService) {}
 
@@ -38,5 +45,40 @@ export class HomeComponent implements OnInit {
     } catch (error) {
       console.error('Error fetching products:', error);
     }
+    this.startTimer();
+  }
+  ngOnDestroy() {
+    // Clear the interval when the component is destroyed
+    if (this.timerInterval) {
+      clearInterval(this.timerInterval);
+    }
+  }
+
+  // Start the countdown timer
+  startTimer() {
+    this.timerInterval = setInterval(() => {
+      if (this.seconds > 0) {
+        this.seconds--;
+      } else {
+        if (this.minutes > 0) {
+          this.minutes--;
+          this.seconds = 59;
+        } else {
+          if (this.hours > 0) {
+            this.hours--;
+            this.minutes = 59;
+            this.seconds = 59;
+          } else {
+            // Timer has ended
+            clearInterval(this.timerInterval);
+          }
+        }
+      }
+    }, 1000);
+  }
+
+  // Format time to always display two digits (e.g., 05 instead of 5)
+  formatTime(time: number): string {
+    return time < 10 ? `0${time}` : time.toString();
   }
 }
