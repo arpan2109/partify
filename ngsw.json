@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1742229100398,
+  "timestamp": 1742235717441,
   "index": "https://arpan2109.github.io/partify/index.html",
   "assetGroups": [
     {
@@ -17,10 +17,10 @@
         "https://arpan2109.github.io/partify/chunk-RS6LHQUM.js",
         "https://arpan2109.github.io/partify/favicon.ico",
         "https://arpan2109.github.io/partify/index.html",
-        "https://arpan2109.github.io/partify/main-6WQSSR66.js",
+        "https://arpan2109.github.io/partify/main-PROXJ3FE.js",
         "https://arpan2109.github.io/partify/manifest.webmanifest",
         "https://arpan2109.github.io/partify/polyfills-DVPPODNC.js",
-        "https://arpan2109.github.io/partify/styles-VM7RDUDF.css"
+        "https://arpan2109.github.io/partify/styles-NG24QLO7.css"
       ],
       "patterns": []
     },
@@ -149,11 +149,11 @@
     "https://arpan2109.github.io/partify/chunk-FJRMAC5Z.js": "ea9964fb0c2b18a58373d193fdc67d49d186a0f5",
     "https://arpan2109.github.io/partify/chunk-RS6LHQUM.js": "9a6b227feb7349dc4f2ce235376b16a5999dbc8c",
     "https://arpan2109.github.io/partify/favicon.ico": "104b7589a49159e3c798ec7bd39b5625530d5f00",
-    "https://arpan2109.github.io/partify/index.html": "70146f4f60d03bc0a8c7ec232c152497cd0b8fa9",
-    "https://arpan2109.github.io/partify/main-6WQSSR66.js": "0193f85fb30b849b16618f35187c112d243593ca",
+    "https://arpan2109.github.io/partify/index.html": "23f76003df607580405d14c730480a7f9cb8bae6",
+    "https://arpan2109.github.io/partify/main-PROXJ3FE.js": "0a8c58faa26b4679f24e1c1bf3b28a1d0ee33f89",
     "https://arpan2109.github.io/partify/manifest.webmanifest": "e04e3c8ac8b627b7bfe3704987765e31c5f992f1",
     "https://arpan2109.github.io/partify/polyfills-DVPPODNC.js": "79878070e1bf87bdb6f993bdf60a2bf5fac15096",
-    "https://arpan2109.github.io/partify/styles-VM7RDUDF.css": "079086d9a9cf0798306b2b9faf3baaa400871408"
+    "https://arpan2109.github.io/partify/styles-NG24QLO7.css": "16c937de3dcae74bfe48879826989bd28c123989"
   },
   "navigationUrls": [
     {
